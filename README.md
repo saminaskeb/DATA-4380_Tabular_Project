@@ -25,7 +25,7 @@ The goal of this project is to predict whether a patient is likely to be diagnos
 
 #### Data Visualization
 
-Show a few visualization of the data and say a few words about what you see.
+![image](https://github.com/user-attachments/assets/ae5fe93c-2cc2-40b5-8f6d-230ab7aea99f)
 
 ### Problem Formulation
 
