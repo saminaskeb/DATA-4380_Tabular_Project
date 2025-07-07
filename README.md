@@ -1,130 +1,121 @@
 ![](UTA-DataScience-Logo.png)
 
-Project Title
+# Project Title
 
-Predicting Diabetes Risk Using Machine Learning on the Pima Indians Dataset
+* **One Sentence Summary** Ex: This repository holds an attempt to apply LSTMs to Stock Market using data from
+"Get Rich" Kaggle challenge (provide link). 
 
-One Sentence Summary: This repository contains an end-to-end data science pipeline applying classification algorithms to the Pima Indians Diabetes dataset from Kaggle to predict diabetes diagnosis.
+## Overview
 
-Overview
+* This section could contain a short paragraph which include the following:
+  * **Definition of the tasks / challenge**  Ex: The task, as defined by the Kaggle challenge is to use a time series of 12 features, sampled daily for 1 month, to predict the next day's price of a stock.
+  * **Your approach** Ex: The approach in this repository formulates the problem as regression task, using deep recurrent neural networks as the model with the full time series of features as input. We compared the performance of 3 different network architectures.
+  * **Summary of the performance achieved** Ex: Our best model was able to predict the next day stock price within 23%, 90% of the time. At the time of writing, the best performance on Kaggle of this metric is 18%.
 
-The goal of this project is to predict whether a patient is likely to be diagnosed with diabetes based on several health metrics. We formulated this as a supervised binary classification task using the Pima Indians Diabetes dataset. Our approach included exploratory data analysis, preprocessing, model training using logistic regression and random forest classifiers, as well as performance optimization through hyperparameter tuning and SMOTE oversampling. The final tuned Random Forest model achieved an F1 score of approximately 70% on the validation set and generalized well on the test set.
+## Summary of Workdone
 
-Summary of Workdone
+Include only the sections that are relevant an appropriate.
 
-Data
+### Data
 
-Type: Tabular data in CSV format, where each row represents a female patient of Pima Indian heritage and columns represent medical attributes (e.g., Glucose, BMI, Age).
+* Data:
+  * Type: For example
+    * Input: medical images (1000x1000 pixel jpegs), CSV file: image filename -> diagnosis
+    * Input: CSV file of features, output: signal/background flag in 1st column.
+  * Size: How much data?
+  * Instances (Train, Test, Validation Split): how many data points? Ex: 1000 patients for training, 200 for testing, none for validation
 
-Size: 768 records, 8 features + 1 binary target
+#### Preprocessing / Clean up
 
-Split: 60% training, 20% validation, 20% test
+* Describe any manipulations you performed to the data.
 
-Preprocessing / Clean up
+#### Data Visualization
 
-Replaced biologically implausible zeroes (e.g., BMI=0) with NaN, then imputed using the median
+Show a few visualization of the data and say a few words about what you see.
 
-Scaled features using StandardScaler where appropriate (e.g., logistic regression)
+### Problem Formulation
 
-Applied SMOTE on training data to handle class imbalance
+* Define:
+  * Input / Output
+  * Models
+    * Describe the different models you tried and why.
+  * Loss, Optimizer, other Hyperparameters.
 
-Data Visualization
+### Training
 
-Plotted histograms of each feature by class label (Outcome)
+* Describe the training:
+  * How you trained: software and hardware.
+  * How did training take.
+  * Training curves (loss vs epoch for test/train).
+  * How did you decide to stop training.
+  * Any difficulties? How did you resolve them?
 
-Used correlation heatmaps and pairplots to explore relationships
+### Performance Comparison
 
-Problem Formulation
+* Clearly define the key performance metric(s).
+* Show/compare results in one table.
+* Show one (or few) visualization(s) of results, for example ROC curves.
 
-Input: 8 numerical health-related features
+### Conclusions
 
-Output: Binary label indicating diabetes (1) or not (0)
+* State any conclusions you can infer from your work. Example: LSTM work better than GRU.
 
-Models Tried:
+### Future Work
 
-Logistic Regression (scaled)
+* What would be the next thing that you would try.
+* What are some other studies that can be done starting from here.
 
-Random Forest (unscaled, scaled, with and without SMOTE)
+## How to reproduce results
 
-Random Forest with GridSearchCV for hyperparameter tuning
+* In this section, provide instructions at least one of the following:
+   * Reproduce your results fully, including training.
+   * Apply this package to other data. For example, how to use the model you trained.
+   * Use this package to perform their own study.
+* Also describe what resources to use for this package, if appropirate. For example, point them to Collab and TPUs.
 
-Performance Comparison
+### Overview of files in repository
 
-Metric: F1 Score (focus on balance between precision and recall)
+* Describe the directory structure, if any.
+* List all relavent files and describe their role in the package.
+* An example:
+  * utils.py: various functions that are used in cleaning and visualizing data.
+  * preprocess.ipynb: Takes input data in CSV and writes out data frame after cleanup.
+  * visualization.ipynb: Creates various visualizations of the data.
+  * models.py: Contains functions that build the various models.
+  * training-model-1.ipynb: Trains the first model and saves model during training.
+  * training-model-2.ipynb: Trains the second model and saves model during training.
+  * training-model-3.ipynb: Trains the third model and saves model during training.
+  * performance.ipynb: loads multiple trained models and compares results.
+  * inference.ipynb: loads a trained model and applies it to test data to create kaggle submission.
 
-Best Performance:
+* Note that all of these notebooks should contain enough text for someone to understand what is happening.
 
-F1 Score ~70% using Random Forest with SMOTE + GridSearch
+### Software Setup
+* List all of the required packages.
+* If not standard, provide or point to instruction for installing the packages.
+* Describe how to install your package.
 
-Recall improved significantly with SMOTE (from 59% to 68%)
+### Data
 
-Visualizations: Bar plots comparing Accuracy, Precision, Recall, and F1 Score across models
+* Point to where they can download the data.
+* Lead them through preprocessing steps, if necessary.
 
-Conclusions
+### Training
 
-SMOTE significantly improved recall and F1 Score
+* Describe how to train the model
 
-Hyperparameter tuning yielded marginal improvements beyond SMOTE alone
+#### Performance Evaluation
 
-Random Forest was more effective than Logistic Regression on this dataset
+* Describe how to run the performance evaluation.
 
-Future Work
 
-Experiment with other classifiers (e.g., XGBoost, SVM)
+## Citations
 
-Incorporate feature engineering and domain knowledge
+* Provide any references.
 
-Try cross-validation and ensemble methods
 
-How to reproduce results
 
-Clone this repository and open the final notebook in Google Colab
 
-Run the notebook cell by cell
 
-Ensure all dependencies are installed (see Software Setup)
 
-Overview of files in repository
-
-diabetes-classification.ipynb: full data science pipeline from EDA to model evaluation
-
-visualizations.ipynb: standalone notebook for generating exploratory data plots
-
-README.md: this file
-
-Software Setup
-
-Python 3.9+
-
-pandas, numpy, scikit-learn, matplotlib, seaborn, imbalanced-learn, xgboost
-
-Install dependencies using:
-
-pip install -r requirements.txt
-
-Data
-
-Source: https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database
-
-No special preprocessing needed beyond what is in the notebook
-
-Training
-
-Training is performed within the notebook using scikit-learn APIs
-
-Hyperparameter tuning performed using GridSearchCV
-
-Performance Evaluation
-
-Evaluation metrics include Accuracy, Precision, Recall, F1 Score
-
-Comparison plots and classification reports are generated automatically
-
-Citations
-
-Kaggle: Pima Indians Diabetes Database (https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
-
-Scikit-learn documentation
-
-Imbalanced-learn documentation
 
