@@ -44,8 +44,10 @@ The goal of this project is to predict whether a patient is likely to be diagnos
 Best Performance:
 
  * F1 Score ~70% using Random Forest with SMOTE + GridSearch
- * Recall improved significantly with SMOTE (from 59% to 72%)
+ * Recall improved significantly with SMOTE + GridSearch(from 59% to 75%)
  * Visualizations: Bar plots comparing Accuracy, Precision, Recall, and F1 Score across models
+   
+![image](https://github.com/user-attachments/assets/757c2382-481f-4c6a-8e64-cacd374caac2)
 
 ### Conclusions
 
