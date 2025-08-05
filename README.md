@@ -2,15 +2,10 @@
 
 # Project Title
 
-* **One Sentence Summary** This repository contains an end-to-end data science pipeline applying classification algorithms to the Pima Indians Diabetes dataset from Kaggle to predict diabetes diagnosis.
+* This repository contains an end-to-end data science pipeline applying classification algorithms to the Pima Indians Diabetes dataset from Kaggle to predict diabetes diagnosis.
 
-## Overview
 
 The goal of this project is to predict whether a patient is likely to be diagnosed with diabetes based on several health metrics. We formulated this as a supervised binary classification task using the Pima Indians Diabetes dataset. Our approach included exploratory data analysis, preprocessing, model training using logistic regression and random forest classifiers, as well as performance optimization through hyperparameter tuning and SMOTE oversampling. The final tuned Random Forest model achieved an F1 score of approximately 70% on the validation set and generalized well on the test set.
-
-## Summary of Workdone
-
-### Data
 
 * Data:
   * Type: Tabular data in CSV format, where each row represents a female patient of Pima Indian heritage and columns represent medical attributes (e.g., Glucose, BMI, Age).
