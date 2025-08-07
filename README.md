@@ -1,6 +1,6 @@
 ![](UTA-DataScience-Logo.png)
 
-# Project Title
+# Pima Indians Diabetes Classification
 
 * This repository contains an end-to-end data science pipeline applying classification algorithms to the Pima Indians Diabetes dataset from Kaggle to predict diabetes diagnosis.
 
