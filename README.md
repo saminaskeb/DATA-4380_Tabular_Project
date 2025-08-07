@@ -19,6 +19,7 @@ The goal of this project is to predict whether a patient is likely to be diagnos
 * Applied SMOTE on training data to handle class imbalance
 
 #### Data Visualization
+<img width="1483" height="2042" alt="image" src="https://github.com/user-attachments/assets/50757e62-db63-4a42-8434-0d2cd48a2a0d" />
 
 ![image](https://github.com/user-attachments/assets/ae5fe93c-2cc2-40b5-8f6d-230ab7aea99f)
 
