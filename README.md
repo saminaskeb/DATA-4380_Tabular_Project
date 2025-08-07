@@ -42,7 +42,9 @@ Best Performance:
  * F1 Score ~70% using Random Forest with SMOTE + GridSearch
  * Recall improved significantly with SMOTE + GridSearch(from 59% to 75%)
  * Visualizations: Bar plots comparing Accuracy, Precision, Recall, and F1 Score across models
-   
+
+<img width="784" height="584" alt="image" src="https://github.com/user-attachments/assets/b8dffd78-4c00-4bd0-b823-a98d25de7cff" />
+
 ![image](https://github.com/user-attachments/assets/757c2382-481f-4c6a-8e64-cacd374caac2)
 
 ### Conclusions
